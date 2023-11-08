@@ -1,0 +1,10 @@
+<h2>Liste des Départements</h2>
+<ul>
+  <li *ngFor="let departement of departements">
+    {{departement.idDepartement}} - {{departement.nomDepart}}
+  </li>
+</ul>
+
+<h2>Ajouter un département</h2>
+<input [(ngModel)]="newDepartement.nomDepart" placeholder="Nom du département">
+<button (click)="addDepartement()">Ajouter</button>

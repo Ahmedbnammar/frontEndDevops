@@ -1,0 +1,14 @@
+<h2>Liste des Instructeurs</h2>
+<ul>
+  <li *ngFor="let instructor of instructors">
+   {{instructor.firstName}} {{instructor.lastName}} - {{instructor.dateOfHire}}
+  </li>
+</ul>
+
+<h2>Ajouter un instructeur</h2>
+<div>
+  <input [(ngModel)]="newInstructor.firstName" placeholder="Prénom de l'instructeur">
+  <input [(ngModel)]="newInstructor.lastName" placeholder="Nom de l'instructeur">
+  <input [(ngModel)]="newInstructor.dateOfHire" placeholder="Date d'embauche de l'instructeur">
+  <button (click)="addInstructor()">Ajouter</button>
+</div>
